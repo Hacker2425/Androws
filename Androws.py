@@ -10,7 +10,7 @@ def handler(signum, frame):
     os.system("clear")
     print("Ctrl + C Detected Exiting")
     os.system("service apache2 stop | zenity --progress --pulsate --title 'PLEASE WAIT...' --text='Stop apache2 service' --percentage=0 --auto-close --width 300 > /dev/null 2>&1")
-    os.system("service postgresql start | zenity --progress --pulsate --title 'PLEASE WAIT...' --text='Stop postgresql service' --percentage=0 --auto-close --width 300 > /dev/null 2>&1")
+    os.system("service postgresql stop | zenity --progress --pulsate --title 'PLEASE WAIT...' --text='Stop postgresql service' --percentage=0 --auto-close --width 300 > /dev/null 2>&1")
     exit()
 
 signal.signal(signal.SIGINT, handler)
